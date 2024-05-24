@@ -17,31 +17,35 @@ namespace Exercicios_Uninove
             InitializeComponent();
         }
 
-        private void btnReais_Click(object sender, EventArgs e)
+        private void btnpre_Click(object sender, EventArgs e)
         {
-            double a, b, soma;
-            /* Entrada de dados*/
-            a = Convert.ToDouble(txtA.Text);
-            b = double.Parse(txtB.Text);
+            /* declaração de variáveis*/
+            int x, y; 
+            /* entrada de dados, converte o texto do textbox para int*/
 
-            /* Processamento */
-            soma = a + b;
-
-            /* Saída de dados */
-            txtResultado.Text = soma.ToString();
-
+            x= Convert.ToInt32(txtResultado.Text);
+            /* Incremento pré-fixado */
+            y = ++x;
+            /*Saída de dados*/
+            MessageBox.Show("Y = " + y + " x = " + x + "Incremento pré-fixado");
         }
 
-        private void btnInteiros_Click(object sender, EventArgs e)
+        private void btnpos_Click(object sender, EventArgs e)
         {
-            double a, b, soma;
+            /* declaração de variáveis*/
+            int x, y;
+            /* entrada de dados, converte o texto do textbox para int*/
 
-            /*Entrada de dados */
-             a = Int32.Parse(txtA.Text);
-             b = Int32.Parse(txtB.Text);
+            x = Convert.ToInt32(txtResultado.Text);
+            /*Incremento pós-fixado */
+            y = x++;
+            /*Saída de dados*/
+            MessageBox.Show(" Y = " + y + " X = " + x + "Incremento pós-fixado");
 
-            soma = a + b;
-            txtResultado.Text = soma.ToString();
+            int a, b;
+            a = 26;
+            b = a % 3;
+            MessageBox.Show("O resultado é " + b);
         }
     }
 }

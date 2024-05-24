@@ -28,97 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnInteiros = new System.Windows.Forms.Button();
-            this.lblA = new System.Windows.Forms.Label();
-            this.txtA = new System.Windows.Forms.TextBox();
-            this.btnReais = new System.Windows.Forms.Button();
-            this.lblB = new System.Windows.Forms.Label();
-            this.txtB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblX = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
+            this.btnpre = new System.Windows.Forms.Button();
+            this.btnpos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnInteiros
+            // lblX
             // 
-            this.btnInteiros.Location = new System.Drawing.Point(463, 60);
-            this.btnInteiros.Name = "btnInteiros";
-            this.btnInteiros.Size = new System.Drawing.Size(75, 23);
-            this.btnInteiros.TabIndex = 0;
-            this.btnInteiros.Text = "Inteiros";
-            this.btnInteiros.UseVisualStyleBackColor = true;
-            this.btnInteiros.Click += new System.EventHandler(this.btnInteiros_Click);
-            // 
-            // lblA
-            // 
-            this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(316, 70);
-            this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(14, 13);
-            this.lblA.TabIndex = 1;
-            this.lblA.Text = "A";
-            // 
-            // txtA
-            // 
-            this.txtA.Location = new System.Drawing.Point(357, 63);
-            this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(100, 20);
-            this.txtA.TabIndex = 2;
-            // 
-            // btnReais
-            // 
-            this.btnReais.Location = new System.Drawing.Point(463, 144);
-            this.btnReais.Name = "btnReais";
-            this.btnReais.Size = new System.Drawing.Size(75, 23);
-            this.btnReais.TabIndex = 3;
-            this.btnReais.Text = "Reais";
-            this.btnReais.UseVisualStyleBackColor = true;
-            this.btnReais.Click += new System.EventHandler(this.btnReais_Click);
-            // 
-            // lblB
-            // 
-            this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(316, 154);
-            this.lblB.Name = "lblB";
-            this.lblB.Size = new System.Drawing.Size(14, 13);
-            this.lblB.TabIndex = 4;
-            this.lblB.Text = "B";
-            // 
-            // txtB
-            // 
-            this.txtB.Location = new System.Drawing.Point(357, 147);
-            this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(100, 20);
-            this.txtB.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(275, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Resultado";
+            this.lblX.AutoSize = true;
+            this.lblX.Location = new System.Drawing.Point(78, 22);
+            this.lblX.Name = "lblX";
+            this.lblX.Size = new System.Drawing.Size(14, 13);
+            this.lblX.TabIndex = 0;
+            this.lblX.Text = "X";
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(357, 196);
+            this.txtResultado.Location = new System.Drawing.Point(105, 50);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(100, 20);
-            this.txtResultado.TabIndex = 7;
+            this.txtResultado.Size = new System.Drawing.Size(242, 20);
+            this.txtResultado.TabIndex = 1;
+            // 
+            // btnpre
+            // 
+            this.btnpre.Location = new System.Drawing.Point(68, 148);
+            this.btnpre.Name = "btnpre";
+            this.btnpre.Size = new System.Drawing.Size(313, 23);
+            this.btnpre.TabIndex = 2;
+            this.btnpre.Text = "Incremento pré-fixado";
+            this.btnpre.UseVisualStyleBackColor = true;
+            this.btnpre.Click += new System.EventHandler(this.btnpre_Click);
+            // 
+            // btnpos
+            // 
+            this.btnpos.Location = new System.Drawing.Point(438, 148);
+            this.btnpos.Name = "btnpos";
+            this.btnpos.Size = new System.Drawing.Size(308, 23);
+            this.btnpos.TabIndex = 3;
+            this.btnpos.Text = "Incremento pós-fixado";
+            this.btnpos.UseVisualStyleBackColor = true;
+            this.btnpos.Click += new System.EventHandler(this.btnpos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnpos);
+            this.Controls.Add(this.btnpre);
             this.Controls.Add(this.txtResultado);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtB);
-            this.Controls.Add(this.lblB);
-            this.Controls.Add(this.btnReais);
-            this.Controls.Add(this.txtA);
-            this.Controls.Add(this.lblA);
-            this.Controls.Add(this.btnInteiros);
+            this.Controls.Add(this.lblX);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -128,14 +88,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnInteiros;
-        private System.Windows.Forms.Label lblA;
-        private System.Windows.Forms.TextBox txtA;
-        private System.Windows.Forms.Button btnReais;
-        private System.Windows.Forms.Label lblB;
-        private System.Windows.Forms.TextBox txtB;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.Button btnpre;
+        private System.Windows.Forms.Button btnpos;
     }
 }
 
